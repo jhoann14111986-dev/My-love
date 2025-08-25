@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para Camila 💖</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --rosa:#ff7bb0; --fucsia:#ff4780; --morado:#7b5cff; --lila:#e7ddff; --negro:#1a1a1a; --blanco:#fff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{font-family:'Poppins',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(1200px 600px at 20% 0%, #fff5fb 0%, #ffe3f1 40%, #f8e9ff 70%, #fff 100%);color:var(--negro);overflow-x:hidden}
+    .container{min-height:100dvh;display:grid;place-items:center;padding:24px}
+    .card{position:relative;background:rgba(255,255,255,.85);backdrop-filter:blur(6px);border:1px solid #fff;box-shadow:0 12px 40px rgba(255,71,128,.15);border-radius:24px;padding:28px;max-width:900px;width:100%}
+    .headline{font-family:'Great Vibes',cursive;font-size:clamp(40px,8vw,84px);line-height:1.05;margin:0;color:var(--fucsia);text-align:center}
+    .sub{font-weight:300;text-align:center;margin:.5rem auto 1.25rem;max-width:56ch}
+    .btn{appearance:none;border:none;border-radius:999px;padding:14px 22px;font-weight:700;cursor:pointer;transition:.2s transform, .3s box-shadow;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+    .btn-primary{background:linear-gradient(135deg,var(--fucsia),var(--morado));color:white}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,71,128,.35)}
+    .btn-ghost{background:transparent;border:2px solid var(--fucsia);color:var(--fucsia)}
+    .btn-ghost:hover{transform:translateY(-2px);background:rgba(255,71,128,.06)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+    section{opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .6s ease, transform .6s ease}
+    section.active{opacity:1;transform:none;pointer-events:auto}
+    .poem{font-size:18px;line-height:1.8;max-width:60ch;margin:16px auto 0;white-space:pre-line}
+    .poem b{color:var(--fucsia)}
+    .type{display:inline-block;border-right:3px solid var(--fucsia);white-space:nowrap;overflow:hidden;animation:blink .8s steps(1) infinite}
+    @keyframes blink{50%{border-color:transparent}}
+    .hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+    .heart{position:absolute;width:18px;height:18px;background:var(--rosa);transform:rotate(45deg);opacity:.6;animation:floatUp var(--dur) linear infinite;}
+    .heart::before,.heart::after{content:"";position:absolute;width:18px;height:18px;background:var(--rosa);border-radius:50%}
+    .heart::before{left:-9px;}
+    .heart::after{top:-9px;}
+    @keyframes floatUp{to{transform:translateY(-110vh) rotate(45deg);opacity:0}}
+    .proposal-title{font-size:clamp(28px,4.6vw,48px);text-align:center;margin:6px 0 12px;color:#ff2a74}
+    .proposal-sub{font-size:18px;text-align:center;margin:0 0 18px;color:#444}
+    .options{display:flex;justify-content:center;gap:14px;margin-top:10px;position:relative}
+    .option{min-width:120px}
+    .option.no{position:relative}
+    .final{display:grid;place-items:center;text-align:center;gap:10px}
+    .big{font-size:clamp(28px,6vw,56px)}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+    .chip{padding:8px 12px;border-radius:999px;background:#fff;border:1px dashed #ffd0e1;color:#ff4b87;font-size:13px}
+    .soft{background:#fff; border:1px solid #ffe2ee; border-radius:20px; padding:18px; box-shadow:0 10px 24px rgba(255,112,160,.12)}
+    .letter{margin-top:20px; font-size:18px; line-height:1.8; white-space:pre-line; text-align:left;}
+    .intro-propuesta{text-align:center; font-size:20px; margin-bottom:18px; color:#333;}
+  </style>
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <section id="poema" class="container active" aria-label="Poema para Camila">
+    <div class="card">
+      <h1 class="headline">Para Camila 💌</h1>
+      <p class="sub"><span id="type" class="type"></span></p>
+
+      <div class="soft">
+        <div class="poem" id="poemText">
+Camila,
+Al principio, cuando te conocí,
+no imaginé que mi corazón <b>aprendería tu nombre</b> en silencio.
+Y sin querer, tus risas se volvieron mi canción favorita,
+ tus ojos, el mapa donde quiero perderme,
+ y tus pasos, el destino que quiero seguir.
+
+No traigo promesas perfectas,
+pero sí un <b>abrazo sincero</b>,
+una mano que te busca en días buenos y en días grises,
+y un montón de ganas de construir algo bonito contigo.
+
+Gracias por existir. 💖
+        </div>
+      </div>
+
+      <div class="letter">
+Querida Camila,
+
+Hoy quiero abrir mi corazón y ser completamente sincero contigo. Desde que llegaste a mi vida, todo ha cambiado: los días son más alegres, las horas más ligeras y los momentos, más significativos. Me haces creer que la felicidad está en los pequeños instantes que compartimos, en tus palabras, en tu sonrisa y hasta en tus silencios.
+
+No tengo todas las respuestas de la vida, pero sí tengo la certeza de que quiero recorrerla contigo. Quiero acompañarte en tus sueños, sostenerte en tus luchas y ser motivo de nuevas alegrías para ti. Eres esa persona especial que logra que mi mundo tenga más colores, más esperanza y más amor.
+
+Camila, lo que siento por ti es tan sincero que no me cabe en el pecho. Esta carta no es solo palabras, es un pedacito de mi alma que te entrego con la ilusión de que lo guardes en la tuya.
+
+Con cariño infinito,
+Jhoann💕
+Te amo mucho mi amor 💕
+      </div>
+
+      <div class="chips">
+        <span class="chip">Risas compartidas</span>
+        <span class="chip">Paseos largos</span>
+        <span class="chip">Cafecito juntos</span>
+        <span class="chip">Fotos tontas</span>
+        <span class="chip">Abrazos fuertes</span>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" id="btnLeer">Ya terminé de leerlo ✨</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="propuesta" class="container" aria-label="Propuesta">
+    <div class="card">
+      <p class="intro-propuesta">Camila, después de esto que te acabo de decir, solo quiero preguntarte algo…</p>
+      <h2 class="proposal-title">¿Quieres ser mi novia? 💖</h2>
+      <p class="proposal-sub">Prometo hacerte reír en los días nublados, celebrar tus logros y estar cuando más me necesites.</p>
+
+      <div class="options">
+        <button id="btnSi" class="btn btn-primary option">Sí, obvio 💞</button>
+        <button id="btnNo" class="btn btn-ghost option no">Mmm… no</button>
+      </div>
+
+      <div class="actions">
+        <button id="btnReleer" class="btn btn-ghost">Volver al poema</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="final" class="container" aria-label="Respuesta">
+    <div class="card final">
+      <div class="big">¡Me hiciste la persona más feliz! 🥹te amo💘</div>
+      <p>Gracias por decir que sí. Te debo mil sonrisas, un helado y todos los atardeceres que vengan.</p>
+      <div class="actions">
+        <a class="btn btn-primary" id="btnCompartir">Compartir esta alegría 📲</a>
+        <button class="btn btn-ghost" id="btnFueguitos">Más confetti ✨</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const $ = (s)=>document.querySelector(s);
+    const show = id => {
+      document.querySelectorAll('section').forEach(sec=>sec.classList.remove('active'));
+      $(id).classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+
+    const typeTarget = $('#type');
+    const mensaje = 'Al principio que te conocí, Camila, no pensé que iba a sentir cosas tan bonitas por ti…';
+    let i=0; function type(){ if(i<=mensaje.length){ typeTarget.textContent = mensaje.slice(0,i++); setTimeout(type, 30); } }
+    window.addEventListener('DOMContentLoaded', type);
+
+    const hearts = $('#hearts');
+    function spawnHeart(){
+      const h = document.createElement('div');
+      h.className='heart';
+      const size = 12 + Math.random()*18;
+      h.style.width = h.style.height = size+'px';
+      h.style.left = Math.random()*100+'vw';
+      h.style.bottom = '-40px';
+      h.style.opacity = 0.4 + Math.random()*0.4;
+      const hue = Math.random() < .5 ? 'var(--rosa)' : 'var(--fucsia)';
+      h.style.background = hue;
+      h.style.setProperty('--dur', (6 + Math.random()*6)+'s');
+      hearts.appendChild(h);
+      setTimeout(()=>h.remove(), 12000);
+    }
+    setInterval(spawnHeart, 420);
+
+    $('#btnLeer').addEventListener('click', ()=> show('#propuesta'));
+    $('#btnReleer').addEventListener('click', ()=> show('#poema'));
+
+    const btnNo = $('#btnNo');
+    btnNo.addEventListener('mouseenter', ()=>{
+      const x = Math.max(10, Math.min(window.innerWidth-150, Math.random()*(window.innerWidth-160)));
+      const y = Math.max(10, Math.min(window.innerHeight-60, window.scrollY + Math.random()*(window.innerHeight-80)));
+      btnNo.style.position='fixed';
+      btnNo.style.left = x+'px';
+      btnNo.style.top = y+'px';
+    });
+
+    function confettiHearts(qty=60){
+      for(let i=0;i<qty;i++) setTimeout(spawnBurstHeart, i*12);
+    }
+    function spawnBurstHeart(){
+      const h = document.createElement('div');
+      h.className='heart';
+      const size = 10 + Math.random()*16;
+      h.style.width=h.style.height=size+'px';
+      h.style.left = (window.innerWidth/2 + (Math.random()*200-100))+'px';
+      h.style.bottom = (window.innerHeight/3)+'px';
+      h.style.opacity=.9;
+      h.style.background = Math.random()<.5?'var(--fucsia)':'var(--morado)';
+      h.style.setProperty('--dur',(3+Math.random()*3)+'s');
+      document.body.appendChild(h);
+      setTimeout(()=>h.remove(), 6000);
+    }
+
+    $('#btnSi').addEventListener('click', ()=>{
+      confettiHearts(100);
+      show('#final');
+      const share = $('#btnCompartir');
+      const text = encodeURIComponent('Camila dijo que SÍ 💖');
+      share.href = `https://wa.me/?text=${text}`;
+      share.target = '_blank';
+    });
+
+    $('#btnFueguitos').addEventListener('click', ()=> confettiHearts(80));
+
+    document.addEventListener('keydown', (e)=>{
+      if(document.querySelector('#poema').classList.contains('active') && (e.key==='Enter' || e.key===' ')){
+        show('#propuesta');
+      }
+    });
+  </script>
+</body>
+</html>
